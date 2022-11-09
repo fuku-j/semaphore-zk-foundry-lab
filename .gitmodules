@@ -1,0 +1,3 @@
+[submodule "semaphore-zk/lib/forge-std"]
+	path = semaphore-zk/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
