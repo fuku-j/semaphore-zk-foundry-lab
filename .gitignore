@@ -15,3 +15,6 @@ out
 
 # NPM PKGs
 node_modules
+
+# Environment param
+.env
