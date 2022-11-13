@@ -110,3 +110,34 @@ Paid: 0.00071626500286506 ETH (238755 gas * 3.000000012 gwei)
           ```:shell
             forge test --fork-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI) --fork-block-number 7945122 --libraries=contracts/Poseidon/Counter.sol:Hashes:0xe0A452533853310C371b50Bd91BB9DCC8961350F
           ```
+
+#### Greeter.sol
+
+✅ Hash: 0x368f96745e7762e398307010209a7b2516311d25205687e018997695114aae5d
+Contract Address: 0xce0df37ce76fd5ef43afd687bc89d2e608a9c1ed
+Block: 7945708
+Paid: 0.0003495000026795 ETH (116500 gas * 3.000000023 gwei)
+
+
+#####
+
+✅ Hash: 0x7ba501f054d30777d2c4083dfce8e283a3464244d0a04ab585251cf1bd9b9048
+Contract Address: 0x3cd62b8f5e99225719f8d547e4eb753ceccef2a8
+Block: 7945708
+Paid: 0.002819574021616734 ETH (939858 gas * 3.000000023 gwei)
+
+
+#####
+
+✅ Hash: 0xf8103261b8af94e77ff174cbd7d1344d913227a07067dac455b99ca18cf98f45
+Contract Address: 0x5ce9428db33c571f322239fe726489fea8ac66a0
+Block: 7945708
+Paid: 0.003669489028132749 ETH (1223163 gas * 3.000000023 gwei)
+
+
+#####
+
+✅ Hash: 0xb1bb8cc83dc696659e07c748843250ae5af47e3034b9a6e036e68ef2cea016a3
+Contract Address: 0x59586cf769f0747920bd4363e8043f0343acc302
+Block: 7945708
+Paid: 0.001255134009622694 ETH (418378 gas * 3.000000023 gwei)

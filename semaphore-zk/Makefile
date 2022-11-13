@@ -20,6 +20,10 @@ localnet:
 testnet: 
 	forge script script/Counter.s.sol:CounterScript --fork-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI) --private-key $(PRIVATE_KEY) --broadcast
 
+.PHONY: testnet-greeter
+testnet: 
+	forge script script/Greeter.s.sol:GreeterScript --fork-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI) --private-key $(PRIVATE_KEY) --broadcast
+
 .PHONY: castcall
 castcall:
 	cast call 0xc070dc7bab214465fb69dff120358901adbaa625 "getCount()(uint256)" "" --rpc-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI)
