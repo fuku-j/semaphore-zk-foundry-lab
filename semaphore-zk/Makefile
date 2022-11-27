@@ -42,4 +42,4 @@ test-hardhat-fork:
 
 .PHONY: testnet-hardhat-fork
 testnet-hardhat-fork:
-	forge test -c test/Greeter.t.sol -m testSuccess_greet --fork-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI) --fork-block-number 6976725 --libraries=node_modules/@zk-kit/incremental-merkle-tree.sol/Hashes.sol:PoseidonT3:0x2a96c5696F85e3d2aa918496806B5c5a4D93E099 --ffi -vvvvv
+	forge test -c test/Greeter.t.sol -m testSuccess_greet --fork-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI) --fork-block-number 7825332 --libraries=node_modules/@zk-kit/incremental-merkle-tree.sol/Hashes.sol:PoseidonT3:0xe0A452533853310C371b50Bd91BB9DCC8961350F --ffi -vvvvv
