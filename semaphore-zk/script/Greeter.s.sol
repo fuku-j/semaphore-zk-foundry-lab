@@ -6,7 +6,7 @@ import "../contracts/Greeter.sol";
 
 import "../node_modules/@semaphore-protocol/contracts/Semaphore.sol";
 import "../node_modules/@semaphore-protocol/contracts/interfaces/ISemaphore.sol";
-import "../node_modules/@semaphore-protocol/contracts/verifiers/Verifier16.sol";
+import "../node_modules/@semaphore-protocol/contracts/verifiers/Verifier20.sol";
 
 /**
  * @dev CounterScript is deploy Greeter.sol to EVM.
@@ -18,14 +18,14 @@ contract GreeterScript is Script {
     address semaphoreAddress;
     uint256 zeroValue;
 
-    Verifier16 verifier;
+    Verifier20 verifier;
     address verifierAddress;
 
     ISemaphore.Verifier iVerifier;
     ISemaphore.Verifier[] iVerifiers;
 
     function setUp() public {
-        verifier = new Verifier16();
+        verifier = new Verifier20();
         verifierAddress = address(verifier);
 
         iVerifier.contractAddress = verifierAddress;

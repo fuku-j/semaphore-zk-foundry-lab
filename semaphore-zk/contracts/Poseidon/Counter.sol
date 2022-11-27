@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.4;
 
-// import "../node_modules/@zk-kit/incremental-merkle-tree.sol/Hashes.sol";
-import "./Hashes.sol";
+import "../../node_modules/@zk-kit/incremental-merkle-tree.sol/Hashes.sol";
+// import "./Hashes.sol";
 
 struct COUNT {
     uint256 count;
