@@ -12,7 +12,7 @@ Cargo.lock
 # foundry build files
 cache
 out
-broadcast
+broadcast/
 
 # NPM PKGs
 node_modules
