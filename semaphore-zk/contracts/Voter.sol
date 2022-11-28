@@ -20,8 +20,8 @@ interface EVoter {
 }
 
 struct Voter {
-    uint256 externalNullifier;
     address voter;
+    uint256 externalNullifier;
 }
 
 library VoterLibrary {
