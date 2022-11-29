@@ -33,18 +33,22 @@ library VoterLibrary {
         self.externalNullifier++;
     }
 
-    function get(Voter storage self) public view returns (uint256) {
+    function externalNullifierOf(Voter storage self)
+        public
+        view
+        returns (uint256)
+    {
         return self.externalNullifier;
     }
 
-    function ownerOf(Voter storage self) public view returns (address) {
+    function voterOf(Voter storage self) public view returns (address) {
         return self.voter;
     }
 }
 
 contract VoterV1 is IVoter, EVoter {
     using VoterLibrary for Voter;
-    Voter voter;
+    Voter private voter;
 
     constructor() {
         voter.init();
@@ -53,7 +57,10 @@ contract VoterV1 is IVoter, EVoter {
     function incrementExternalNullifier() public override onlyVoter {
         voter.increment();
 
-        emit incrementExternalNullifierEvent(voter.ownerOf(), voter.get());
+        emit incrementExternalNullifierEvent(
+            voter.voterOf(),
+            voter.externalNullifierOf()
+        );
     }
 
     function getExternalNullifier()
@@ -62,13 +69,16 @@ contract VoterV1 is IVoter, EVoter {
         onlyVoter
         returns (uint256)
     {
-        emit getExternalNullifierEvent(voter.ownerOf(), voter.get());
+        emit getExternalNullifierEvent(
+            voter.voterOf(),
+            voter.externalNullifierOf()
+        );
 
-        return voter.get();
+        return voter.externalNullifierOf();
     }
 
     modifier onlyVoter() {
-        require(voter.ownerOf() == msg.sender, "Caller is not a voter.");
+        require(voter.voterOf() == msg.sender, "Caller is not a voter.");
         _;
     }
 }

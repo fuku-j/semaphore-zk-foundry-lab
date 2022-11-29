@@ -43,3 +43,7 @@ test-hardhat-fork:
 .PHONY: testnet-hardhat-fork
 testnet-hardhat-fork:
 	forge test -c test/Greeter.t.sol -m testSuccess_greet --fork-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI) --fork-block-number 7825332 --libraries=node_modules/@zk-kit/incremental-merkle-tree.sol/Hashes.sol:PoseidonT3:0xe0A452533853310C371b50Bd91BB9DCC8961350F --ffi -vvvvv
+
+.PHONY: testnet-masquerade-fork
+testnet-masquerade-fork:
+	forge test -c test/Masquerade.t.sol -m testSuccess_Masquerade_entry --fork-url https://goerli.infura.io/v3/$(RPC_ENDPOINT_URI) --fork-block-number 7825332 --libraries=node_modules/@zk-kit/incremental-merkle-tree.sol/Hashes.sol:PoseidonT3:0xe0A452533853310C371b50Bd91BB9DCC8961350F --ffi -vvvvv
