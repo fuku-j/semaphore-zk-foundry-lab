@@ -12,6 +12,10 @@ Cargo.lock
 # foundry build files
 cache
 out
+broadcast/
 
 # NPM PKGs
 node_modules
+
+# Environment param
+.env
